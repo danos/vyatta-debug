@@ -1,0 +1,63 @@
+Source: vyatta-debug
+Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
+Build-Depends: debhelper (>= 9)
+Section: debug
+Priority: extra
+Standards-Version: 4.0.0
+
+Package: vyatta-debug
+Architecture: any
+Depends: cscope,
+         dpkg-dev,
+         emacs-nox | emacs23-nox,
+         gdb,
+         libc6-dbg,
+         libczmq-dbg,
+         libstdc++6-7-dbg | libstdc++6-6-dbg | libstdc++6-5-dbg | libstdc++6-4.9-dbg | libstdc++6-4.8-dbg,
+         libzmq5-dbg | libzmq3-dbg,
+         mgen,
+         strace,
+         valgrind,
+         vim,
+         ${misc:Depends}
+Description: Debug Utils
+ This metapackage depends on common libraries and debug utilities such
+ as gdb and valgrind.
+
+Package: vyatta-debug-controller
+Architecture: any
+Depends: libjson-c3-dbgsym | libjson-c2-dbg | libc6-dbg,
+         libmnl0-dbgsym | libc6-dbg,
+         vplane-controller-dbg,
+         vyatta-debug,
+         ${misc:Depends}
+Description: Debug metapackage for controller
+ This metapackage depends on the debugging symbols for the controller
+ and for the libraries used by it.
+
+Package: vyatta-debug-dataplane
+Architecture: any
+Depends: libjson-c3-dbgsym | libjson-c2-dbg | libc6-dbg,
+         libmnl0-dbgsym | libc6-dbg,
+         liburcu4-dbgsym | libc6-dbg,
+         libfal-bcm1-dbgsym, libfal-mvl1-dbgsym,
+         libvyatta-dpdk-swport1-dbgsym,
+         vyatta-dataplane-dbg,
+         vyatta-debug,
+         ${misc:Depends}
+Description: Debug metapackage for dataplane
+ This metapackage depends on the debugging symbols for the dataplane
+ and for the libraries used by it.
+
+Package: vyatta-debug-kernel
+Architecture: any
+Depends: linux-image-vyatta-amd64-dbgsym, ${misc:Depends}
+Description: Debug metapackage for kernel
+ This metapackage depends on the debugging symbols for the kernel.
+
+Package: vyatta-debug-routing
+Architecture: any
+Depends: vyatta-debug, vyatta-routing-dbg, ${misc:Depends}
+Description: Debug metapackage for routing
+ This metapackage depends on the debugging symbols for the routing stack
+ and for the libraries used by it.

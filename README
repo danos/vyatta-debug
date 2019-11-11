@@ -1,0 +1,2 @@
+This is an attempt at a virtual package driving dependencies for various debug 
+tools. This package should never be included in any release build.
