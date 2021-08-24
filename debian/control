@@ -38,6 +38,7 @@ Architecture: any
 Depends: libjson-c3-dbgsym | libjson-c2-dbg | libc6-dbg,
          libmnl0-dbgsym | libc6-dbg,
          liburcu4-dbgsym | libc6-dbg,
+         libdpdk-dbg,
          libfal-bcm1-dbgsym, libfal-mvl1-dbgsym,
          libvyatta-dpdk-swport1-dbgsym,
          vyatta-dataplane-dbgsym,
