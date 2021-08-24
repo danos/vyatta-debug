@@ -39,7 +39,6 @@ Depends: libjson-c3-dbgsym | libjson-c2-dbg | libc6-dbg,
          libmnl0-dbgsym | libc6-dbg,
          liburcu4-dbgsym | libc6-dbg,
          libdpdk-dbg,
-         libfal-bcm1-dbgsym, libfal-mvl1-dbgsym,
          libvyatta-dpdk-swport1-dbgsym,
          vyatta-dataplane-dbgsym,
          vyatta-debug,
@@ -47,6 +46,12 @@ Depends: libjson-c3-dbgsym | libjson-c2-dbg | libc6-dbg,
 Description: Debug metapackage for dataplane
  This metapackage depends on the debugging symbols for the dataplane
  and for the libraries used by it.
+
+Package: vyatta-debug-dataplane-hw
+Architecture: any
+Depends: libfal-bcm1-dbgsym, libfal-mvl1-dbgsym
+Description: Debug metapackage for dataplane hardware plugins
+ This metapackage depends on the debugging symbols for hardware plugins
 
 Package: vyatta-debug-kernel
 Architecture: any
