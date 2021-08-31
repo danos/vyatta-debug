@@ -1,3 +1,13 @@
+vyatta-debug (0.7) unstable; urgency=medium
+
+  [ Srinivas Narayan ]
+  * Fix name of dataplane debug symbol package
+  * Remove zmq debug packages no longer available in buster
+  * Include DPDK debug symbols
+  * Separate hardware plugin debug symbols
+
+ -- Daniel Gollub <dgollub@att.com>  Tue, 31 Aug 2021 15:18:36 +0200
+
 vyatta-debug (0.6) unstable; urgency=medium
 
   * DANOS Import
